@@ -1,1 +1,4 @@
-Sitemap: https://ananyahari21.github.io/sitemap.xml
+User-agent: *
+Disallow:
+
+Sitemap: https://AnanyaHari21.github.io/sitemap.xml

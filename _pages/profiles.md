@@ -15,16 +15,16 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p>Email: cpk@cs.unc.edu</p>
-  - align: left
-    image: 7.jpg
-    content: about_person1.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>Email: </p>
-  -  align: right
-    image: 7.jpg
-    content: about_person1.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>Email: </p>
+  # - align: left
+  #   image: 7.jpg
+  #   content: about_person1.md
+  #   image_circular: false # crops the image to make it circular
+  #   more_info: >
+  #     <p>Email: </p>
+  # -  align: right
+  #   image: 7.jpg
+  #   content: about_person1.md
+  #   image_circular: false # crops the image to make it circular
+  #   more_info: >
+  #     <p>Email: </p>
 ---

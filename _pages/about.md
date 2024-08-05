@@ -2,18 +2,19 @@
 layout: about
 title: about
 permalink: /
-subtitle: Assistant Professor. <a href='https://cs.unc.edu/'>UNC Chapel Hill</a>. Email - cpk@cs.unc.edu
+subtitle:
 profile:
   align: left
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>Assistant Professor</p>
-  #   <p>UNC Chapel Hill</p>
-  #   <p>Email: cpk[at]cs.unc.edu</p>
+  more_info: >
+     <p>Assistant Professor</p>
+     <p>UNC Chapel Hill</p>
+     <p>Email: cpk[at]cs.unc.edu</p>
+     <p>Insert relevant socials here</p>
 
 news: true # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
@@ -25,4 +26,4 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 I am an Assistant Professor of Computer Science at UNC Chapel Hill.   
 
-My research interests lie at the intersection of optics, perception, graphics, optimization, and machine learning. I am a Senior Member of Optica, recipient of IEEE VR Best Dissertation Award, Timothy L. Quigg Inventor of the Year at UNC, and several Best Paper and Demo Awards. I completed my postdoctoral research at Princeton University, obtained my PhD from UNC Chapel Hill, and my B.Tech and M.Tech degrees in Electrical Engineering, with a specialization in Signal Processing, all from IIT Madras. I have previously held research internship positions at Facebook Reality Labs, Microsoft Research Cambridge, NVIDIA Research and I was also a visiting researcher at the Fluid Interfaces Group of MIT Media Lab and CoSMIC lab of NUS, Singapore. insert extra words here. 
+My research interests lie at the intersection of optics, perception, graphics, optimization, and machine learning. I am a Senior Member of Optica, recipient of IEEE VR Best Dissertation Award, Timothy L. Quigg Inventor of the Year at UNC, and several Best Paper and Demo Awards. I completed my postdoctoral research at Princeton University, obtained my PhD from UNC Chapel Hill, and my B.Tech and M.Tech degrees in Electrical Engineering, with a specialization in Signal Processing, all from IIT Madras. I have previously held research internship positions at Facebook Reality Labs, Microsoft Research Cambridge, NVIDIA Research and I was also a visiting researcher at the Fluid Interfaces Group of MIT Media Lab and CoSMIC lab of NUS, Singapore. 

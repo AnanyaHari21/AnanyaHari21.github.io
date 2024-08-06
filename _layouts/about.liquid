@@ -46,11 +46,12 @@ layout: default
       <h2>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
+      <div style="width: 70%;"> 
       {% include news.liquid limit=true %}
+      </div>
     {% endif %}
 
     <div class="clearfix">{{ content }}</div>
-
 
     <!-- Latest posts -->
     {% if site.latest_posts.enabled %}

@@ -22,22 +22,22 @@ layout: default
     </header>
 
     <article>
-      <div class="cv">
-        {% for entry in site.data.cv %}
+      <div class="class">
+        {% for entry in site.data.class %}
           <a class="anchor" id="{{ entry.title }}"></a>
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
             <div>
               {% if entry.type == 'list' %}
-                {% include cv/list.liquid %}
+                {% include class/list.liquid %}
               {% elsif entry.type == 'map' %}
-                {% include cv/map.liquid %}
+                {% include class/map.liquid %}
               {% elsif entry.type == 'nested_list' %}
-                {% include cv/nested_list.liquid %}
+                {% include class/nested_list.liquid %}
               {% elsif entry.type == 'time_table' %}
-                {% include cv/time_table.liquid %}
+                {% include class/time_table.liquid %}
               {% elsif entry.type == 'list_groups' %}
-                {% include cv/list_groups.liquid %}
+                {% include class/list_groups.liquid %}
               {% else %}
                 {{ entry.contents }}
               {% endif %}
@@ -68,7 +68,7 @@ layout: default
     </header>
 
     <article>
-      <div class="cv">
+      <div class="class">
         {% for data in site.data.resume %}
           {% if site.jsonresume and site.jsonresume.size > 0 %}
             {% unless site.jsonresume contains data[0] %}

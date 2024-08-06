@@ -4,7 +4,10 @@ layout: default
 
 <article>
 
- <header class="post-header">
+ 
+
+
+<header class="post-header">
     <h1 class="post-title">
         {% if site.title == 'blank' %}
             <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
@@ -33,15 +36,9 @@ layout: default
     </div>
 {% endif %}
 
-
 <div class="post">
-    <div style="display: flex; flex-wrap: wrap;">
-        <!-- Image -->
-
-
-
-        
-                </div>
+    
+        </div>
         <!-- News -->
         <div style="flex: 2;">
             {% if page.news and site.announcements.enabled %}
@@ -58,6 +55,7 @@ layout: default
     <!-- Biography -->
     <div class="clearfix" style="width: 100%;">{{ content }}</div>
 </div>
+
 
 
     <!-- Latest posts -->

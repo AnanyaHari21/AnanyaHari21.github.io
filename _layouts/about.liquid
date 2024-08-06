@@ -33,23 +33,24 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
- <!-- News -->
+        {% if page.profile.more_info %}
+          <div class="more-info">{{ page.profile.more_info }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+    
+<div class="post">
+ 
+   <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h2>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
-      </div>
-    {% endif %}
-    
-<div class="post">
 
     <div class="clearfix">{{ content }}</div>
 
-      {% if page.profile.more_info %}
-        <div class="more-info">{{ page.profile.more_info }}</div>
-      {% endif %}
 
     <!-- Latest posts -->
     {% if site.latest_posts.enabled %}

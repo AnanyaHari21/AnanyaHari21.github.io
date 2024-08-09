@@ -11,7 +11,7 @@ profile:
      <p>Assistant Professor</p>
      <p>UNC Chapel Hill</p>
      <p>Email: cpk@cs.unc.edu</p>
-     <p><a href = "https://www.cs.unc.edu/~cpk/data/personal/Praneeth_CV.pdf">CV</a></p>
+    #  <p><a href = "https://www.cs.unc.edu/~cpk/data/personal/Praneeth_CV.pdf">CV</a></p>
      <p>Insert relevant socials here</p>
 
 news: true # includes a list of news items

@@ -11,8 +11,9 @@ profile:
      <p>Assistant Professor</p>
      <p>UNC Chapel Hill</p>
      <p>Email: cpk@cs.unc.edu</p>
+     <p>CV</p>
      <p>Insert relevant socials here</p>
-     <p> CV</p>
+    
 
 
 news: true # includes a list of news items

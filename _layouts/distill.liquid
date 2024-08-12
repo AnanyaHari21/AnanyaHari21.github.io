@@ -92,11 +92,7 @@
         <d-footnote-list></d-footnote-list>
         <d-citation-list></d-citation-list>
       </d-appendix>
-
-      {% if site.disqus_shortname and page.disqus_comments %}{% include disqus.liquid %}{% endif %}
-      {% if site.giscus.repo and page.giscus_comments %}
-        {% include giscus.liquid %}
-      {% endif %}
+      
     </div>
 
     <!-- Footer -->

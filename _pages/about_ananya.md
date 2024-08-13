@@ -1,1 +1,0 @@
-My name is Ananya Hari and I am a high school senior from New Jersey. I am passionate about computer science, and its applications in real world industries such as edcuation and healthcare. I worked on this website over the summer, where I learned new languages such as Ruby, and gained valueable programing experince. 

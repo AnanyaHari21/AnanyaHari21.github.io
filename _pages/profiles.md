@@ -21,4 +21,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p>Email: cpk@cs.unc.edu</p>
+  - align: left
+    image: ananyaHari.jpg
+    content: 
 ---

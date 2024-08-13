@@ -1,0 +1,67 @@
+---
+layout: distill
+title: course 2
+description: Insert timings here
+tags: 
+giscus_comments: false
+featured: false
+bibliography: 2018-12-22-distill.bib
+
+toc:
+  - name: Instructor
+  - name: Course Description
+  - name: Course Objectives & Outcomes
+  - name: Prerequisites
+  - name: Seminar Format
+  - name: Schedule and Study Material
+  - name: Projects & Grading
+  - name: Course Policiew
+
+---
+
+## Instructor
+
+insert text here
+
+---
+
+## Course Description
+
+insert text here
+
+---
+
+## Course Objectives & Outcomes
+
+insert text here
+
+
+---
+
+## Prerequisites
+
+insert text here
+
+
+---
+
+## Seminar Format
+insert text here
+
+---
+
+## Schedule and Study Material:
+
+insert text here
+
+---
+
+## Projects & Grading
+
+insert text here
+
+
+---
+## Course Policies
+
+insert text here

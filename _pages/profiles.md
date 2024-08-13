@@ -16,9 +16,15 @@ profiles:
     more_info: >
       <p>Email: cpk@cs.unc.edu</p>
   - align: right
-    image: prof_pic.jpg
-    content: about_prof.md
-    image_circular: false # crops the image to make it circular
+    image: 7.jpg
+    content: about_person1.md
+    image_circular: false
     more_info: >
-      <p>Email: cpk@cs.unc.edu</p>
+      <p>insert contact info</p>
+  - align: left
+    image: ananyaHari.jpg
+    content: about_ananya.md
+    image_circular: false
+    more_info: >
+
 ---

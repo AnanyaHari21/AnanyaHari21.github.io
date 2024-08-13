@@ -1,0 +1,1 @@
+My name is Ananya Hari and I am a rising high school senior from New Jersey. I am passionate about the emerging intersection between computer science with other fields such as edcuation and public health. I helped create this website over the summer, and I learned a lot about ruby and gained valueable experience. 

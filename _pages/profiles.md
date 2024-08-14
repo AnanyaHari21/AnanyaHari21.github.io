@@ -20,7 +20,7 @@ profiles:
     content: about_prof.md
     image_circular: false # crops the image to make it circular
     more_info: >
-      <p>Email: cpk@cs.unc.edu</p>
+      <p>insert email here</p>
   - align: left
     image: ananyaHari.jpg
     content: about_ananya.md

@@ -47,8 +47,14 @@ layout: default
 </div>
 
 <!-- Biography -->
-<div class="clearfix" style="width: 100%;">{{ content }}</div>
-
+<div class="clearfix" style="width: 100%;">
+    <style>
+        p {
+            margin-bottom: 2%; /* Add spacing between paragraphs */
+        }
+    </style>
+    {{ content }}
+</div>
 
     <!-- Latest posts -->
     {% if site.latest_posts.enabled %}

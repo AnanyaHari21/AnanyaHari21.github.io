@@ -40,6 +40,9 @@ layout: default
                 <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
             </h2>
             <div class="news-announcements" style="width: 100%;">
+                <div class="extra-text">
+                    {{ page.extra_text }}
+                </div>
                 {% include news.liquid limit=true %}
             </div>
         </div>
@@ -69,6 +72,11 @@ layout: default
         /* Add extra spacing between news and announcement paragraphs */
         .news-announcements p {
             margin-bottom: 25px; /* Adjust this value for desired spacing */
+        }
+
+        /* Add extra spacing between extra text and announcements */
+        .extra-text {
+            margin-bottom: 30px; /* Adjust this value for the desired spacing between extra text and announcements */
         }
     </style>
     {{ content }}

@@ -50,7 +50,20 @@ layout: default
 <div class="clearfix" style="width: 100%;">
     <style>
         p {
-            margin-bottom: 2%; /* Add spacing between paragraphs */
+            margin-bottom: 20px; /* Default spacing between paragraphs */
+        }
+
+        /* Increase spacing for smaller screen sizes */
+        @media (max-width: 768px) {
+            p {
+                margin-bottom: 30px; /* More spacing for smaller screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            p {
+                margin-bottom: 40px; /* Even more spacing for very small screens */
+            }
         }
     </style>
     {{ content }}

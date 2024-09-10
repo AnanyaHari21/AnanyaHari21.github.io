@@ -39,7 +39,7 @@ layout: default
             <h2>
                 <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
             </h2>
-            <div style="width: 100%;"> 
+            <div class="news-announcements" style="width: 100%;">
                 {% include news.liquid limit=true %}
             </div>
         </div>
@@ -64,6 +64,11 @@ layout: default
             p {
                 margin-bottom: 40px; /* Even more spacing for very small screens */
             }
+        }
+
+        /* Add extra spacing between news and announcement paragraphs */
+        .news-announcements p {
+            margin-bottom: 25px; /* Adjust this value for desired spacing */
         }
     </style>
     {{ content }}

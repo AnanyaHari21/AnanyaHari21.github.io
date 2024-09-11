@@ -15,9 +15,10 @@ layout: default
     <p class="desc">{{ page.subtitle }}</p>
 </header>
 
-<div class="post" style="display: flex; flex-wrap: wrap; gap: 20px;">
+<!-- Original Layout for Large Screens -->
+<div class="post" style="display: flex; flex-wrap: wrap;">
     {% if page.profile %}
-        <div class="profile" style="flex: 1; min-width: 300px;">
+        <div class="profile" style="flex: 1;">
             {% if page.profile.image %}
                 {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
                 {% if page.profile.image_circular %}
@@ -33,79 +34,77 @@ layout: default
             {% endif %}
         </div>
     {% endif %}
-</div>
-
-<!-- Biography and News Section -->
-<div class="bio-news" style="display: flex; flex-direction: column; width: 100%; gap: 20px;">
-    <div class="biography" style="flex: 1;">
-        <!-- Biography -->
-        <div class="clearfix">
-            {{ content }}
-        </div>
-    </div>
-
+    
     {% if page.news and site.announcements.enabled %}
-    <div class="news" style="flex: 1;">
-        <h2>
-            <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-        </h2>
-        <div class="news-announcements">
-            <div class="extra-text">
-                {{ page.extra_text }}
+        <div style="flex: 2;">
+            <h2>
+                <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+            </h2>
+            <div class="news-announcements" style="width: 100%;">
+                <div class="extra-text">
+                    {{ page.extra_text }}
+                </div>
+                {% include news.liquid limit=true %}
             </div>
-            {% include news.liquid limit=true %}
         </div>
-    </div>
     {% endif %}
 </div>
 
-<!-- Responsive Styles -->
+<!-- Biography Section (Displayed in both layouts) -->
+<div class="biography" style="width: 100%;">
+    {{ content }}
+</div>
+
+<!-- Responsive Layout for Small Screens -->
 <style>
-    .post, .bio-news {
-        display: flex;
-        flex-wrap: wrap;
+    /* Large screens keep the original flex layout */
+    @media (min-width: 769px) {
+        .post {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
+    /* Small screens (tablets and mobile) show the modified layout */
     @media (max-width: 768px) {
-        .post, .bio-news {
-            flex-direction: column;
+        .post {
+            display: block; /* Stack everything vertically */
         }
 
-        .profile {
-            order: 1;
+        .profile, .biography, .news {
+            width: 100%; /* Full width for each section */
         }
 
         .biography {
-            order: 2;
+            order: 2; /* Display biography after the image and extra info */
         }
 
         .news {
-            order: 3;
+            order: 3; /* Display news at the bottom */
         }
-    }
 
-    p {
-        margin-bottom: 20px;
-    }
+        /* Adjust margins for small screens */
+        .post, .biography, .news {
+            margin-bottom: 20px;
+        }
 
-    @media (max-width: 768px) {
         p {
+            margin-bottom: 30px; /* More spacing for smaller screens */
+        }
+
+        @media (max-width: 576px) {
+            p {
+                margin-bottom: 40px; /* Even more spacing for very small screens */
+            }
+        }
+
+        .news-announcements p {
             margin-bottom: 30px;
         }
-    }
 
-    @media (max-width: 576px) {
-        p {
-            margin-bottom: 40px;
+        .extra-text {
+            margin-bottom: 30px;
         }
-    }
-
-    .news-announcements p {
-        margin-bottom: 30px;
-    }
-
-    .extra-text {
-        margin-bottom: 30px;
     }
 </style>
 

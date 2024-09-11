@@ -1,5 +1,5 @@
 ---
-layout: default 
+layout: default
 ---
 
 <article>
@@ -15,9 +15,9 @@ layout: default
     <p class="desc">{{ page.subtitle }}</p>
 </header>
 
-<div class="post" style="display: flex; flex-wrap: wrap;">
+<div class="post" style="display: flex; flex-wrap: wrap; gap: 20px;">
     {% if page.profile %}
-        <div class="profile" style="flex: 1;">
+        <div class="profile" style="flex: 1; min-width: 300px;">
             {% if page.profile.image %}
                 {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
                 {% if page.profile.image_circular %}
@@ -33,82 +33,107 @@ layout: default
             {% endif %}
         </div>
     {% endif %}
-    
-    {% if page.news and site.announcements.enabled %}
-        <div style="flex: 2;">
-            <h2>
-                <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-            </h2>
-            <div class="news-announcements" style="width: 100%;">
-                <div class="extra-text">
-                    {{ page.extra_text }}
-                </div>
-                {% include news.liquid limit=true %}
-            </div>
+</div>
+
+<!-- Biography and News Section -->
+<div class="bio-news" style="display: flex; flex-direction: column; width: 100%; gap: 20px;">
+    <div class="biography" style="flex: 1;">
+        <!-- Biography -->
+        <div class="clearfix">
+            {{ content }}
         </div>
+    </div>
+
+    {% if page.news and site.announcements.enabled %}
+    <div class="news" style="flex: 1;">
+        <h2>
+            <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        </h2>
+        <div class="news-announcements">
+            <div class="extra-text">
+                {{ page.extra_text }}
+            </div>
+            {% include news.liquid limit=true %}
+        </div>
+    </div>
     {% endif %}
 </div>
 
-<!-- Biography -->
-<div class="clearfix" style="width: 100%;">
-    <style>
+<!-- Responsive Styles -->
+<style>
+    .post, .bio-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+        .post, .bio-news {
+            flex-direction: column;
+        }
+
+        .profile {
+            order: 1;
+        }
+
+        .biography {
+            order: 2;
+        }
+
+        .news {
+            order: 3;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
         p {
-            margin-bottom: 20px; /* Default spacing between paragraphs */
+            margin-bottom: 30px;
         }
+    }
 
-        /* Increase spacing for smaller screen sizes */
-        @media (max-width: 768px) {
-            p {
-                margin-bottom: 30px; /* More spacing for smaller screens */
-            }
+    @media (max-width: 576px) {
+        p {
+            margin-bottom: 40px;
         }
+    }
 
-        @media (max-width: 576px) {
-            p {
-                margin-bottom: 40px; /* Even more spacing for very small screens */
-            }
-        }
+    .news-announcements p {
+        margin-bottom: 30px;
+    }
 
-        /* Add extra spacing between news and announcement paragraphs */
-        .news-announcements p {
-            margin-bottom: 30px; 
-        }
+    .extra-text {
+        margin-bottom: 30px;
+    }
+</style>
 
-        /* Add extra spacing between extra text and announcements */
-        .extra-text {
-            margin-bottom: 30px; /* Adjust this value for the desired spacing between extra text and announcements */
-        }
-    </style>
-    {{ content }}
+<!-- Latest posts -->
+{% if site.latest_posts.enabled %}
+<h2>
+    <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+</h2>
+{% include latest_posts.liquid %}
+{% endif %}
+
+<!-- Selected papers -->
+{% if page.selected_papers %}
+<h2>
+    <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+</h2>
+{% include selected_papers.liquid %}
+{% endif %}
+
+<!-- Social -->
+{% if page.social %}
+<div class="social">
+    <div class="contact-icons">{% include social.liquid %}</div>
+    <div class="contact-note">{{ site.contact_note }}</div>
 </div>
+{% endif %}
 
-    <!-- Latest posts -->
-    {% if site.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter.enabled and site.footer_fixed %}
-      {% include scripts/newsletter.liquid center=true %}
-    {% endif %}
-  </article>
-</div>
+{% if site.newsletter.enabled and site.footer_fixed %}
+{% include scripts/newsletter.liquid center=true %}
+{% endif %}
+</article>

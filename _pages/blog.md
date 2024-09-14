@@ -117,7 +117,7 @@ pagination:
     {% assign categories = post.categories | join: "" %}
     
     <!-- Define a default thumbnail if none exists -->
-    {% assign thumbnail = post.thumbnail | default: '7.jpg' %}
+    {% assign thumbnail = post.thumbnail | default: "assets/img/7.jpg" %}
 
     <li>
 

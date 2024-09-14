@@ -8,13 +8,13 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-     <p>Assistant Professor</p>
-     <p>UNC Chapel Hill</p>
-     <p>Email: cpk@cs.unc.edu</p>
-     <p><a href = "https://www.cs.unc.edu/~cpk/data/personal/Praneeth_CV.pdf">CVgi</a></p>
-     <p><a href = "https://x.com/praneethchk">X Handle</a></p>
-     <p><a href = "https://scholar.google.com/citations?user=pEMEFwQAAAAJ&hl=en&oi=ao"> Google Schoolar</a></p>
-     <p><a href = "https://www.linkedin.com/in/praneethchk/"> LinkedIn</a></p>
+     <p>Assistant Professor</p>  
+     <p>UNC Chapel Hill</p>  
+     <p>Email: cpk@cs.unc.edu</p>  
+     <p><a href = "https://www.cs.unc.edu/~cpk/data/personal/Praneeth_CV.pdf">CV</a></p>  
+     <p><a href = "https://x.com/praneethchk">X Handle</a></p>  
+     <p><a href = "https://scholar.google.com/citations?user=pEMEFwQAAAAJ&hl=en&oi=ao"> Google Schoolar</a></p>  
+     <p><a href = "https://www.linkedin.com/in/praneethchk/"> LinkedIn</a></p>  
     #  <p><a href = "">GitHub</a></p>
     
 

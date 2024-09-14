@@ -117,7 +117,7 @@ pagination:
     {% assign categories = post.categories | join: "" %}
     
     <!-- Define a default thumbnail if none exists -->
-    {% assign thumbnail = post.thumbnail | default: "assets/img/7.jpg" %}
+    {% assign thumbnail = post.thumbnail | default: "assets/img/optical_nn.jpeg" %}
 
     <li>
 
@@ -164,7 +164,7 @@ pagination:
         
         <!-- Post thumbnail area -->
         <div class="col-sm-3">
-          <img class="card-img" src="{{ thumbnail | relative_url }}" style="object-fit: cover; height: 90%;" alt="image">
+          <img class="card-img" src="assets/img/optical_nn.jpeg" style="object-fit: cover; height: 90%;" alt="image">
         </div>
       </div>
 

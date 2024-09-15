@@ -16,7 +16,7 @@
         {% endif %}
         {% for item in news limit: news_limit %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <th scope="row" class="small-date" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
@@ -32,3 +32,11 @@
     <p>No news so far...</p>
   {% endif %}
 </div>
+
+<style>
+.small-date {
+  font-size: 0.75rem; /* Adjust size as needed */
+  color: #6c757d; /* Optional: A lighter color for the dates */
+}
+
+</style>

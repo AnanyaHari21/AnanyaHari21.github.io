@@ -56,6 +56,7 @@ layout: default
 </div>
 
 <!-- Responsive Layout for Small Screens -->
+<!-- Responsive Layout for Small Screens -->
 <style>
     /* Large screens keep the original flex layout */
     @media (min-width: 769px) {
@@ -65,17 +66,16 @@ layout: default
         }
     }
 
-    /* Small screens (tablets and mobile) show the modified layout */
+    /* Small screens (phones) show the modified layout */
     @media (max-width: 768px) {
-        .post, .biography, .news {
+        .post {
             display: block;
-            width: 70%; /* Ensure all elements take up 70% of the screen width */
-            margin: 0 auto; /* Center the elements */
+            width: 100%;
         }
 
         .profile {
-            width: 70%; /* Ensure profile section takes up 70% width */
-            margin-bottom: 20px; /* Add spacing between stacked elements */
+            width: 100%; /* Profile takes up 100% on small screens */
+            margin-bottom: 20px;
         }
 
         .more-info, .extra-text {
@@ -84,22 +84,25 @@ layout: default
         }
 
         .biography {
-            width: 70%; /* Biography takes up 70% width */
-            margin-bottom: 20px; /* Add spacing */
-        }
-
-        .news {
-            width: 90%; /* Adjust news to take up 90% width */
+            width: 100%; /* Biography takes full width */
             margin-bottom: 20px;
         }
 
+        /* Make the news section take 90% of the screen width */
+        .news-announcements {
+            width: 90%;
+            margin: 0 auto; /* Center the news section */
+            margin-bottom: 20px;
+        }
+
+        /* Adjust paragraphs for better spacing on smaller screens */
         p {
-            margin-bottom: 30px; /* More spacing for smaller screens */
+            margin-bottom: 30px;
         }
 
         @media (max-width: 576px) {
             p {
-                margin-bottom: 40px; /* Even more spacing for very small screens */
+                margin-bottom: 40px; /* More spacing for very small screens */
             }
         }
 

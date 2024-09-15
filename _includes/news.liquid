@@ -7,7 +7,7 @@
         style="max-height: 60vw"
       {% endif %}
     >
-      <table class="table table-sm table-borderless">
+      <table class="table table-sm table-borderless news-table">
         {% assign news = site.news | reverse %}
         {% if include.limit and site.announcements.limit %}
           {% assign news_limit = site.announcements.limit %}
@@ -34,10 +34,15 @@
 </div>
 
 
+
 <style>
 .highlight-date {
   font-size: 0.8rem; /* Adjust size as needed */
-  color: #007bff
+  color: #7BAFD4
+}
+
+.news-table td, .news-table th {
+  padding: 0.25rem; /* Adjust padding as needed */
 }
 
 </style>

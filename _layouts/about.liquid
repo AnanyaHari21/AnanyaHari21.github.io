@@ -5,7 +5,6 @@ layout: default
 <article>
 
 <header class="post-header">
-
     <p class="desc">{{ page.subtitle }}</p>
 </header>
 
@@ -61,14 +60,13 @@ layout: default
 
     /* Small screens (tablets and mobile) show the modified layout */
     @media (max-width: 768px) {
-        .post, .biography, .news {
+        .post, .biography, .news, .profile {
             display: block;
-            width: 100%; /* Ensure all elements take up 70% of the screen width */
+            width: 85%; /* Ensure all elements take up 85% of the screen width */
             margin: 0 auto; /* Center the elements */
         }
 
-        .profle {
-            width: 100%; /* Ensure profile section takes up 70% width */
+        .profile {
             margin-bottom: 20px; /* Add spacing between stacked elements */
         }
 
@@ -78,12 +76,10 @@ layout: default
         }
 
         .biography {
-            width: 100%; /* Biography takes up 70% width */
             margin-bottom: 20px; /* Add spacing */
         }
 
         .news {
-            width: 100%; /* News takes up 70% width */
             margin-bottom: 20px;
         }
 
@@ -134,4 +130,5 @@ layout: default
 {% if site.newsletter.enabled and site.footer_fixed %}
 {% include scripts/newsletter.liquid center=true %}
 {% endif %}
+
 </article>

@@ -11,7 +11,6 @@ profile:
      <p>Assistant Professor</p>  
      <p>UNC Chapel Hill</p>
      <p>Email: cpk@cs.unc.edu</p>  
-     <br>
      <br> 
      <p><a href = "https://www.cs.unc.edu/~cpk/data/personal/Praneeth_CV.pdf">CV</a>|</p>  
      <p><a href = "https://x.com/praneethchk"><i class="fab fa-x-twitter"></i></a>,</p>  

@@ -13,6 +13,32 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
+    
+    <style>
+      /* Custom CSS to pin the TOC to the side */
+      #toc-sidebar {
+        position: fixed;
+        top: 100px; /* Adjust the distance from the top of the screen */
+        right: 20px; /* Adjust for right-side pinning */
+        max-width: 250px; /* Set a max width for the sidebar */
+      }
+      
+      /* Ensure the content area does not overlap with the sidebar */
+      .content-area {
+        margin-right: 270px; /* Adjust this margin to match the width of the sidebar */
+      }
+
+      /* For smaller screens, reset the sidebar's fixed positioning */
+      @media (max-width: 768px) {
+        #toc-sidebar {
+          position: static;
+          max-width: 100%;
+        }
+        .content-area {
+          margin-right: 0;
+        }
+      }
+    </style>
   </head>
 
   <!-- Body -->
@@ -23,25 +49,23 @@
     <!-- Content -->
     <div class="container mt-5" role="main">
       {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
-          <div class="row">
+        <div class="row">
+          {% if page.toc.sidebar == 'right' %}
             <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-9 content-area">{{ content }}</div>
+            <!-- sidebar pinned to the side -->
             <div class="col-sm-3">
               <nav id="toc-sidebar" class="sticky-top"></nav>
             </div>
-          </div>
-        {% else %}
-          <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
+          {% else %}
+            <!-- sidebar pinned to the side -->
             <div class="col-sm-3">
               <nav id="toc-sidebar" class="sticky-top"></nav>
             </div>
             <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-          </div>
-        {% endif %}
+            <div class="col-sm-9 content-area">{{ content }}</div>
+          {% endif %}
+        </div>
       {% else %}
         {{ content }}
       {% endif %}

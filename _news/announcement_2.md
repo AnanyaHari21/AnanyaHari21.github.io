@@ -6,7 +6,6 @@ inline: true
 related_posts: false
 ---
 Apr. 2024	[ New ] Paper on neural etendue expansion accepted to Nature Communications.  
-
 <!-- Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
 
 ---

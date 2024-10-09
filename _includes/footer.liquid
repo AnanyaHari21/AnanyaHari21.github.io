@@ -1,6 +1,6 @@
 {% if site.footer_fixed %} 
   <footer class="fixed-bottom small-footer" role="contentinfo">
-    <div class="container mt-0 py-1">
+    <div class="container mt-0 py-1 text-right"> <!-- Added text-right class -->
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
       {% if site.impressum_path %}
@@ -17,7 +17,7 @@
       {% include scripts/newsletter.liquid %}
     {% endif %}
     
-    <div class="container py-1">
+    <div class="container py-1 text-right"> <!-- Added text-right class -->
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
       {% if site.impressum_path %}
@@ -33,8 +33,7 @@
 .small-footer {
   font-size: 0.8rem; 
   padding: 0 !important; 
-  text-align: left !important;
-
+  text-align: right !important; /* Changed from left to right */
 }
 
 .small-footer a {

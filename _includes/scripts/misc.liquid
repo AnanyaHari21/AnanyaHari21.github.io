@@ -18,8 +18,11 @@
 {% endif %}
 {% if page.toc and page.toc.sidebar %}
   <!-- Sidebar Table of Contents -->
-  <script defer src="{{ '/assets/js/bootstrap-toc.min.js' | relative_url | bust_file_cache }}"></script>
+  <nav class="toc-sidebar">
+    <script defer src="{{ '/assets/js/bootstrap-toc.min.js' | relative_url | bust_file_cache }}"></script>
+  </nav>
 {% endif %}
+
 
 <!-- Bootstrap Table -->
 {% if page.pretty_table %}
@@ -39,5 +42,17 @@
 
 <!-- Jupyter Open External Links New Tab -->
 <script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
+
+<style>
+  /* Styling for the pinned sidebar TOC */
+  .toc-sidebar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 20px; /* Adjust this value to control how far down the TOC starts */
+    max-height: 90vh; /* Adjust for better scrolling on small screens */
+    overflow-y: auto; /* Allows scrolling if content exceeds the max height */
+  }
+</style>
+
 
 {% assign site.test-library.url = site.test-library.url | append: 'teste' %}

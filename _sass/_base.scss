@@ -1012,37 +1012,35 @@ progress::-moz-progress-bar {
 
 /* Table of Contents */
 nav[data-toggle="toc"] {
-  position: fixed;
-  top: 5rem;
-  left: 0;
-  width: 250px; // Adjust width as needed
-  height: 100%; // Ensures it occupies the full height of the screen
-  overflow-y: auto; // Allows scrolling if the TOC is long
-
-  .nav .nav > li > a {
-    font-size: 0.75rem;
-  }
-
-  .nav > li > a {
-    color: var(--global-text-color);
-    font-size: 0.75rem;
-
-    &:hover {
-      color: var(--global-hover-color);
-      border-left-color: var(--global-hover-color);
+  nav[data-toggle="toc"] {
+    top: 5rem;
+  
+    .nav .nav>li>a {
+      font-size: .75rem;
+    }
+  
+    .nav>li>a {
+      color: var(--global-text-color);
+      font-size: .75rem;
+  
+      &:hover {
+        color: var(--global-hover-color);
+        border-left-color: var(--global-hover-color);
+      }
+    }
+  
+    .nav-link.active {
+      color: var(--global-theme-color);
+      border-left-color: var(--global-theme-color);
+      font-size: .75rem;
+  
+      &:hover {
+        color: var(--global-hover-color);
+        border-left-color: var(--global-hover-color);
+      }
     }
   }
-
-  .nav-link.active {
-    color: var(--global-theme-color);
-    border-left-color: var(--global-theme-color);
-    font-size: 0.75rem;
-
-    &:hover {
-      color: var(--global-hover-color);
-      border-left-color: var(--global-hover-color);
-    }
-  }
+  
 }
 
 

@@ -18,6 +18,7 @@
       /* Custom CSS to pin the TOC to the side */
       #toc-sidebar {
         position: fixed;
+        position: sticky !important;
         top: 100px; /* Adjust the distance from the top of the screen */
         left: 20px; /* Adjust for left-side pinning, change to right for right-side */
         max-width: 250px; /* Set a max width for the sidebar */
@@ -35,6 +36,7 @@
       @media (max-width: 768px) {
         #toc-sidebar {
           position: static;
+          position: sticky;
           max-width: 100%;
           height: auto; /* Reset the height */
         }
@@ -61,14 +63,14 @@
           </div>
           <!-- sidebar, which will move to the top on a small screen -->
           <div class="col-sm-3">
-            <nav id="toc-sidebar" class="sticky-top"></nav>
+            <nav id="toc-sidebar" class="sticky-top" data-toggle = "toc"></nav>
           </div>
         </div>
         {% else %}
         <div class="row">
           <!-- sidebar, which will move to the top on a small screen -->
           <div class="col-sm-3">
-            <nav id="toc-sidebar" class="sticky-top"></nav>
+            <nav id="toc-sidebar" class="sticky-top" data-toggle = "toc"></nav>
           </div>
           <!-- main content area -->
           <div class="col-sm-9">

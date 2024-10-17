@@ -15,44 +15,36 @@
     {% include head.liquid %}
     
     <style>
-      /* Custom CSS to pin the TOC to the side */
-      #toc-sidebar {
-        position: fixed;
-        position: sticky !important;
-        top: 100px; /* Adjust the distance from the top of the screen */
-        left: 20px; /* Adjust for left-side pinning, change to right for right-side */
-        max-width: 250px; /* Set a max width for the sidebar */
-        height: calc(100vh - 120px); /* Ensure the sidebar doesn't overflow the viewport */
-        overflow-y: auto; /* Allow scrolling if TOC is long */
-        padding-right: 15px; /* Add padding to avoid text touching the edge */
-      }
+      <style>
+  /* Custom CSS to pin the TOC to the side */
+  #toc-sidebar {
+    position: sticky;
+    top: 100px; /* Adjust the distance from the top of the screen */
+    left: 20px; /* Adjust for left-side pinning, change to right for right-side */
+    max-width: 250px; /* Set a max width for the sidebar */
+    height: calc(100vh - 120px); /* Ensure the sidebar doesn't overflow the viewport */
+    overflow-y: auto; /* Allow scrolling if TOC is long */
+    padding-right: 15px; /* Add padding to avoid text touching the edge */
+  }
 
-      #sticky-top{
-        position: sticky !important;
-        top: 0;  /* Sticks to the top of the viewport */
-        left: 0; /* Pins it to the left side */
-        width: 200px; /* Adjust width as needed */
-        z-index: 1020;
-      }
+  /* Ensure the content area does not overlap with the sidebar */
+  .content-area {
+    margin-left: 270px; /* Adjust this margin to match the width of the sidebar */
+  }
 
-      /* Ensure the content area does not overlap with the sidebar */
-      .content-area {
-        margin-left: 270px; /* Adjust this margin to match the width of the sidebar */
-      }
+  /* For smaller screens, reset the sidebar's fixed positioning */
+  @media (max-width: 768px) {
+    #toc-sidebar {
+      position: static; /* Remove sticky behavior on small screens */
+      max-width: 100%;
+      height: auto; /* Reset the height */
+    }
+    .content-area {
+      margin-left: 0;
+    }
+  }
+</style>
 
-      /* For smaller screens, reset the sidebar's fixed positioning */
-      @media (max-width: 768px) {
-        #toc-sidebar {
-          position: static;
-          position: sticky;
-          max-width: 100%;
-          height: auto; /* Reset the height */
-        }
-        .content-area {
-          margin-left: 0;
-        }
-      }
-    </style>
   </head>
 
   <!-- Body -->
